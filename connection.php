@@ -1,8 +1,6 @@
 <?php
- 
- $servername="localhost";
- $username="root";
- $password="";
- $dbname="quickpost";
- 
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $dbname="quickpost";
 ?>

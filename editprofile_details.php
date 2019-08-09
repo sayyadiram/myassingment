@@ -13,9 +13,6 @@
     if($db->connect_error){
         die("connection failed:".$db);
     }
-    /*else{
-        echo"connected";
-    }*/
    
     //insert data into table
     if(isset($_POST['update'])){
@@ -30,12 +27,11 @@
         $last_name=mysqli_real_escape_string($db,$_POST['last_name']);
                
         mysqli_query($db,"UPDATE users SET user_name='$user_name',user_mail_id='$user_mail_id',confirm_pass='$confirm_pass',first_name='$first_name',last_name='$last_name' WHERE id=$id");
-        //$_SESSION['msg']="Details Update";
         header('Location:index.php');
-
     }
+
     if(isset($_POST['cancel'])){
         header('Location:index.php');
-
     }   
+
 ?>
